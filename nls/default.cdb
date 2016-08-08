@@ -1,0 +1,614 @@
+R00001.00    [PUBID]                                        Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             PUBID, YOUTH CASE IDENTIFICATION CODE
+ 
+COMMENT: YOUTH CASE IDENTIFICATION CODE
+ 
+       0           0
+     998           1 TO 999
+     999        1000 TO 1999
+     997        2000 TO 2999
+     996        3000 TO 3999
+     998        4000 TO 4999
+     996        5000 TO 5999
+     994        6000 TO 6999
+     994        7000 TO 7999
+     989        8000 TO 8999
+      23        9000 TO 9999
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:           9022        Mean:              4504.3
+ 
+Hard Minimum: [0]  Hard Maximum: [99999999]
+ 
+Lead In: R72976.00[Default]
+Default Next Question: R05363.00
+--------------------------------------------------------------------------------
+R05363.00    [KEY!SEX]                                      Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!SEX, RS GENDER (SYMBOL)
+ 
+COMMENT: Gender of Youth
+ 
+    4599       1 Male
+    4385       2 Female
+       0       0 No Information
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00001.00[Default]
+Default Next Question: R05364.00
+--------------------------------------------------------------------------------
+R05364.01    [KEY!BDATE_M]                                  Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!BDATE, RS BIRTHDATE MONTH/YEAR (SYMBOL)
+ 
+COMMENT: Birthdate of Youth
+ 
+     816           1: January
+     693           2: February
+     760           3: March
+     659           4: April
+     689           5: May
+     720           6: June
+     762           7: July
+     782           8: August
+     839           9: September
+     765          10: October
+     763          11: November
+     736          12: December
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             12        Mean:                6.56
+ 
+Earliest (NonMissing): JANUARY/1980
+Latest   (NonMissing): DECEMBER/1984
+ 
+Hard Minimum: [01/01/1880]  Hard Maximum: [the current date]
+ 
+Lead In: R05363.00[Default]
+Default Next Question: R05366.00
+--------------------------------------------------------------------------------
+R05364.02    [KEY!BDATE_Y]                                  Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!BDATE, RS BIRTHDATE MONTH/YEAR (SYMBOL)
+ 
+COMMENT: Birthdate of Youth
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:           1980        Max:           1984        Mean:             1982.01
+ 
+Earliest (NonMissing): JANUARY/1980
+Latest   (NonMissing): DECEMBER/1984
+ 
+Hard Minimum: [01/01/1880]  Hard Maximum: [the current date]
+ 
+Lead In: R05363.00[Default]
+Default Next Question: R05366.00
+--------------------------------------------------------------------------------
+R14826.00    [KEY!RACE_ETHNICITY]                           Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!RACE_ETHNICITY, COMBINED RACE AND ETHNICITY (SYMBOL)
+ 
+COMMENT: Combined race - ethnicity variable
+ 
+    2335       1 Black
+    1901       2 Hispanic
+      83       3 Mixed Race (Non-Hispanic)
+    4665       4 Non-Black / Non-Hispanic
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R05387.00[Default]
+Default Next Question: R05389.00
+--------------------------------------------------------------------------------
+T45806.00    [YHEA29-180]                                   Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: CAUSE OF BIOLOGICAL FATHERS DEATH
+ 
+(HAND R SHOWCARD OO)  What caused your biological father's death?
+ 
+UNIVERSE: R born in 1980; bio father is deceased
+ 
+      43       1 Heart Attack/Stroke
+      23       2 Accident
+      48       3 Cancer
+       6       4 Old Age
+       1       5 Emphysema
+       2       6 OTHER (SPECIFY)
+       1       7 OTHER - Recoded to heart disease
+       5       8 OTHER - Recoded to stroke
+       3       9 OTHER - Recoded to AIDS/HIV
+       4      10 OTHER - Recoded to homicide
+       5      11 OTHER - Recoded to liver disease
+       3      12 OTHER - Recoded to diabetes
+       2      13 OTHER - Recoded to septicemia
+       2      14 OTHER - Recoded to viral hepatitis
+       2      15 OTHER - Recoded to nephritis (kidney disease)
+       1      17 OTHER - Recoded to influenza or pneumonia
+       6      18 OTHER - Recoded to suicide
+       7      19 OTHER - Unspecified Drug/Alcohol related
+       8      20 OTHER - Specific cause
+       4      21 OTHER - Unspecified cause
+       5     999 UNCODABLE
+  -------
+     181
+ 
+Refusal(-1)            3
+Don't Know(-2)        16
+TOTAL =========>     200   VALID SKIP(-4)    7359     NON-INTERVIEW(-5)    1425
+ 
+Lead In: T45804.00[1:1] T45805.00[0:0]
+Default Next Question: T45807.00
+--------------------------------------------------------------------------------
+T45807.00    [YHEA29-190]                                   Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: AGE OF BIOLOGICAL FATHER AT DEATH
+ 
+How old was he when he died?
+ 
+UNIVERSE: R born in 1980; bio father is deceased
+ 
+       0           0
+       0           1 TO 9
+       0          10 TO 19
+       6          20 TO 29
+      19          30 TO 39
+      43          40 TO 49
+      55          50 TO 59
+      28          60 TO 69
+       9          70 TO 79
+       3          80 TO 89
+       0          90 TO 99
+       0         100 TO 99999999: 100+
+  -------
+     163
+ 
+Refusal(-1)            4
+Don't Know(-2)        33
+TOTAL =========>     200   VALID SKIP(-4)    7359     NON-INTERVIEW(-5)    1425
+ 
+Min:             20        Max:             83        Mean:                51.4
+ 
+Hard Minimum: [15]  Hard Maximum: [110]
+ 
+Lead In: T45806.00[Default]
+Default Next Question: T45808.00
+--------------------------------------------------------------------------------
+T45810.00    [YHEA29-220]                                   Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: CAUSE OF BIOLOGICAL MOTHERS DEATH
+ 
+(HAND R SHOWCARD OO)  What caused your biological mother's death?
+ 
+UNIVERSE: R born in 1980; bio mother is deceased
+ 
+       8       1 Heart Attack/Stroke
+       5       2 Accident
+      29       3 Cancer
+       0       4 Old Age
+       0       5 Emphysema
+       2       6 OTHER (SPECIFY)
+       2       7 OTHER - Recoded to heart disease
+       1       8 OTHER - Recoded to stroke
+       3       9 OTHER - Recoded to AIDS/HIV
+       2      10 OTHER - Recoded to homicide
+       3      11 OTHER - Recoded to liver disease
+       3      12 OTHER - Recoded to diabetes
+       0      13 OTHER - Recoded to septicemia
+       0      14 OTHER - Recoded to viral hepatitis
+       3      15 OTHER - Recoded to nephritis (kidney disease)
+       0      17 OTHER - Recoded to influenza or pneumonia
+       0      18 OTHER - Recoded to suicide
+       0      19 OTHER - Unspecified Drug/Alcohol related
+      13      20 OTHER - Specific cause
+       1      21 OTHER - Unspecified cause
+       3     999 UNCODABLE
+  -------
+      78
+ 
+Refusal(-1)            4
+Don't Know(-2)         3
+TOTAL =========>      85   VALID SKIP(-4)    7474     NON-INTERVIEW(-5)    1425
+ 
+Lead In: T45808.00[1:1] T45809.00[0:0]
+Default Next Question: T45811.00
+--------------------------------------------------------------------------------
+T45811.00    [YHEA29-230]                                   Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: AGE OF BIOLOGICAL MOTHER AT DEATH
+ 
+How old was she when she died?
+ 
+UNIVERSE: R born in 1980; bio mother is deceased
+ 
+       0           0
+       0           1 TO 9
+       1          10 TO 19
+       3          20 TO 29
+      12          30 TO 39
+      35          40 TO 49
+      23          50 TO 59
+       3          60 TO 69
+       0          70 TO 79
+       0          80 TO 89
+       0          90 TO 99
+       0         100 TO 99999999: 100+
+  -------
+      77
+ 
+Refusal(-1)            4
+Don't Know(-2)         4
+TOTAL =========>      85   VALID SKIP(-4)    7474     NON-INTERVIEW(-5)    1425
+ 
+Min:             19        Max:             63        Mean:               45.69
+ 
+Hard Minimum: [15]  Hard Maximum: [110]
+ 
+Lead In: T45810.00[Default]
+Default Next Question: T45812.00
+--------------------------------------------------------------------------------
+T77103.00    [YHEA29-180]                                   Survey Year: 2011
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: CAUSE OF BIOLOGICAL FATHERS DEATH
+ 
+(REFER TO SHOWCARD OO)  What caused your biological father's death?
+ 
+UNIVERSE: R born in 1980; bio father is deceased
+ 
+      51       1 Heart Attack/Stroke
+      44       2 Accident
+      84       3 Cancer
+       4       4 Old Age
+       7       5 Emphysema
+      37       6 OTHER (SPECIFY)
+      17       7 OTHER - Recoded to heart disease
+       3       8 OTHER - Recoded to stroke
+       5       9 OTHER - Recoded to AIDS/HIV
+      16      10 OTHER - Recoded to homicide
+      16      11 OTHER - Recoded to liver disease
+      11      12 OTHER - Recoded to diabetes
+       1      13 OTHER - Recoded to septicemia
+       0      14 OTHER - Recoded to viral hepatitis
+       6      15 OTHER - Recoded to nephritis (kidney disease)
+       1      16 OTHER - Recoded to Alzheimer's disease
+       3      17 OTHER - Recoded to influenza or pneumonia
+      15      18 OTHER - Recoded to suicide
+      12      19 OTHER - Unspecified Drug/Alcohol related
+       8      20 OTHER - Specific cause
+       2      21 OTHER - Unspecified cause
+      12      22 OTHER - Not deceased
+       2     999 UNCODABLE
+  -------
+     357
+ 
+Refusal(-1)            8
+Don't Know(-2)        48
+TOTAL =========>     413   VALID SKIP(-4)    7010     NON-INTERVIEW(-5)    1561
+ 
+Min:              1        Max:            999        Mean:               12.47
+ 
+Lead In: T77101.00[1:1] T77102.00[0:0]
+Default Next Question: T77104.00
+--------------------------------------------------------------------------------
+T77104.00    [YHEA29-190]                                   Survey Year: 2011
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: AGE OF BIOLOGICAL FATHER AT DEATH
+ 
+How old was he when he died?
+ 
+UNIVERSE: R born in 1980; bio father is deceased
+ 
+       0           0
+       0           1 TO 9
+       2          10 TO 19
+      20          20 TO 29
+      45          30 TO 39
+      75          40 TO 49
+     107          50 TO 59
+      58          60 TO 69
+      18          70 TO 79
+       1          80 TO 89
+       0          90 TO 99
+       0         100 TO 99999999: 100+
+  -------
+     326
+ 
+Refusal(-1)           14
+Don't Know(-2)        73
+TOTAL =========>     413   VALID SKIP(-4)    7010     NON-INTERVIEW(-5)    1561
+ 
+Min:             18        Max:             80        Mean:               50.32
+ 
+Hard Minimum: [15]  Hard Maximum: [110]
+ 
+Lead In: T77103.00[Default]
+Default Next Question: T77105.00
+--------------------------------------------------------------------------------
+T77107.00    [YHEA29-220]                                   Survey Year: 2011
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: CAUSE OF BIOLOGICAL MOTHERS DEATH
+ 
+(REFER TO SHOWCARD OO)  What caused your biological mother's death?
+ 
+UNIVERSE: R born in 1980; bio mother is deceased
+ 
+      19       1 Heart Attack/Stroke
+      12       2 Accident
+      49       3 Cancer
+       2       4 Old Age
+       1       5 Emphysema
+      17       6 OTHER (SPECIFY)
+       6       7 OTHER - Recoded to heart disease
+       1       8 OTHER - Recoded to stroke
+       3       9 OTHER - Recoded to AIDS/HIV
+       7      10 OTHER - Recoded to homicide
+       1      11 OTHER - Recoded to liver disease
+       2      12 OTHER - Recoded to diabetes
+       0      13 OTHER - Recoded to septicemia
+       0      14 OTHER - Recoded to viral hepatitis
+       1      15 OTHER - Recoded to nephritis (kidney disease)
+       0      16 OTHER - Recoded to Alzheimer's disease
+       2      17 OTHER - Recoded to influenza or pneumonia
+       1      18 OTHER - Recoded to suicide
+       3      19 OTHER - Unspecified Drug/Alcohol related
+      16      20 OTHER - Specific cause
+       3      21 OTHER - Unspecified cause
+       5      22 OTHER - Not deceased
+       2     999 UNCODABLE
+  -------
+     153
+ 
+Refusal(-1)            4
+Don't Know(-2)        20
+TOTAL =========>     177   VALID SKIP(-4)    7246     NON-INTERVIEW(-5)    1561
+ 
+Min:              1        Max:            999        Mean:               20.27
+ 
+Lead In: T77105.00[1:1] T77106.00[0:0]
+Default Next Question: T77108.00
+--------------------------------------------------------------------------------
+T77108.00    [YHEA29-230]                                   Survey Year: 2011
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: AGE OF BIOLOGICAL MOTHER AT DEATH
+ 
+How old was she when she died?
+ 
+UNIVERSE: R born in 1980; bio mother is deceased
+ 
+       0           0
+       0           1 TO 9
+       2          10 TO 19
+       8          20 TO 29
+      19          30 TO 39
+      62          40 TO 49
+      48          50 TO 59
+      10          60 TO 69
+       0          70 TO 79
+       0          80 TO 89
+       0          90 TO 99
+       0         100 TO 99999999: 100+
+  -------
+     149
+ 
+Refusal(-1)            3
+Don't Know(-2)        25
+TOTAL =========>     177   VALID SKIP(-4)    7246     NON-INTERVIEW(-5)    1561
+ 
+Min:             17        Max:             64        Mean:               46.08
+ 
+Hard Minimum: [15]  Hard Maximum: [110]
+ 
+Lead In: T77107.00[Default]
+Default Next Question: T77109.00
+--------------------------------------------------------------------------------
+T91123.00    [YHEA29-180]                                   Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: CAUSE OF BIOLOGICAL FATHERS DEATH
+ 
+(REFER TO SHOWCARD OO)  What caused your biological father's death?
+ 
+UNIVERSE: R born in 1980; bio father is deceased
+ 
+      49       1 Heart Attack
+      22       2 Accident
+      44       3 Cancer
+       6       4 Old Age
+       1       5 Emphysema
+       6       6 OTHER (SPECIFY)
+      11       7 Stroke
+       1       8 Added in - Heart Disease
+       4       9 Added in - AIDS/HIV
+      13      10 Added in - homicide
+       5      11 Added in - liver disease
+       5      12 Added in - diabetes
+       0      13 Added in - septicemia
+       0      14 Added in - viral hepatitis
+       2      15 Added in - nephritis (kidney disease)
+       0      16 Added in - Alzheimer's disease
+       3      17 Added in - Influenza or pneumonia
+      14      18 Added in - Suicide
+       3      19 Added in - Unspecified Drug/Alcohol related
+      16      20 Added in - Specific cause
+       2      21 Added in - Unspecified cause
+       6      22 Added in - Not deceased
+       0     995 Supervisor Review
+       0     999 Uncodable
+  -------
+     213
+ 
+Refusal(-1)            3
+Don't Know(-2)        28
+TOTAL =========>     244   VALID SKIP(-4)    6897     NON-INTERVIEW(-5)    1843
+ 
+Min:              1        Max:             22        Mean:                7.23
+ 
+Lead In: T91121.00[1:1] T91122.00[0:0]
+Default Next Question: T91124.00
+--------------------------------------------------------------------------------
+T91124.00    [YHEA29-190]                                   Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: AGE OF BIOLOGICAL FATHER AT DEATH
+ 
+How old was he when he died?
+ 
+UNIVERSE: R born in 1980; bio father is deceased
+ 
+       0           0
+       0           1 TO 9
+       4          10 TO 19
+      15          20 TO 29
+      23          30 TO 39
+      50          40 TO 49
+      68          50 TO 59
+      27          60 TO 69
+      10          70 TO 79
+       3          80 TO 89
+       0          90 TO 99
+       0         100 TO 99999999: 100+
+  -------
+     200
+ 
+Refusal(-1)            6
+Don't Know(-2)        38
+TOTAL =========>     244   VALID SKIP(-4)    6897     NON-INTERVIEW(-5)    1843
+ 
+Min:             15        Max:             82        Mean:               49.29
+ 
+Hard Minimum: [15]  Hard Maximum: [110]
+ 
+Lead In: T91123.00[Default]
+Default Next Question: T91125.00
+--------------------------------------------------------------------------------
+T91127.00    [YHEA29-220]                                   Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: CAUSE OF BIOLOGICAL MOTHERS DEATH
+ 
+(REFER TO SHOWCARD OO)  What caused your biological mother's death?
+ 
+UNIVERSE: R born in 1980; bio mother is deceased
+ 
+       9       1 Heart Attack
+       9       2 Accident
+      25       3 Cancer
+       0       4 Old Age
+       1       5 Emphysema
+       6       6 OTHER (SPECIFY)
+       5       7 Stroke
+       1       8 Added in - Heart Disease
+       4       9 Added in - AIDS/HIV
+       2      10 Added in - homicide
+       3      11 Added in - liver disease
+       1      12 Added in - diabetes
+       0      13 Added in - septicemia
+       0      14 Added in - viral hepatitis
+       1      15 Added in - nephritis (kidney disease)
+       0      16 Added in - Alzheimer's disease
+       0      17 Added in - Influenza or pneumonia
+       3      18 Added in - Suicide
+       2      19 Added in - Unspecified Drug/Alcohol related
+       3      20 Added in - Specific cause
+       1      21 Added in - Unspecified cause
+       2      22 Added in - Not deceased
+       0     995 Supervisor Review
+       0     999 Uncodable
+  -------
+      78
+ 
+Refusal(-1)            2
+Don't Know(-2)         4
+TOTAL =========>      84   VALID SKIP(-4)    7057     NON-INTERVIEW(-5)    1843
+ 
+Min:              1        Max:             22        Mean:                6.65
+ 
+Lead In: T91125.00[1:1] T91126.00[0:0]
+Default Next Question: T91128.00
+--------------------------------------------------------------------------------
+T91128.00    [YHEA29-230]                                   Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             HEALTH AGE 29: AGE OF BIOLOGICAL MOTHER AT DEATH
+ 
+How old was she when she died?
+ 
+UNIVERSE: R born in 1980; bio mother is deceased
+ 
+       0           0
+       0           1 TO 9
+       2          10 TO 19
+       6          20 TO 29
+      13          30 TO 39
+      30          40 TO 49
+      22          50 TO 59
+       4          60 TO 69
+       0          70 TO 79
+       0          80 TO 89
+       0          90 TO 99
+       0         100 TO 99999999: 100+
+  -------
+      77
+ 
+Refusal(-1)            3
+Don't Know(-2)         4
+TOTAL =========>      84   VALID SKIP(-4)    7057     NON-INTERVIEW(-5)    1843
+ 
+Min:             15        Max:             64        Mean:               44.26
+ 
+Hard Minimum: [15]  Hard Maximum: [110]
+ 
+Lead In: T91127.00[Default]
+Default Next Question: T91129.00
