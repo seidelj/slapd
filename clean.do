@@ -17,3 +17,12 @@ replace COD_FATHER = T4580600 if T4580600 > 0
 replace COD_FATHER = T6212900 if T6212900 > 0
 replace COD_FATHER = T7710300 if T7710300 > 0  
 replace COD_FATHER = T9112300 if T9112300 > 0
+drop if COD_FATHER == 999
+
+count if S1241500 != -4 & COD_MOTHER == 2 | COD_MOTHER == 10
+
+count if S1241600 != -4 & COD_FATHER == 2 | COD_FATHER == 10
+
+
+count if S1241500 != -4 & COD_MOTHER != 2 & COD_MOTHER != 10
+count if S1241600 != -4 & COD_FATHER != 2 & COD_FATHER != 10
