@@ -1,0 +1,173 @@
+E80431.00    [INCARC_TOTNUM]                                Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             TOTAL NUMBER OF INCARCERATIONS
+ 
+Total number of separate incarcerations reported by the respondent.
+ 
+    8198           0: No incarcerations
+     605           1 TO 2: incarcerations
+     145           3 TO 4: incarcerations
+      29           5 TO 6: incarcerations
+       5           7 TO 8: incarcerations
+       1           9 TO 10: incarcerations
+       1          11 TO 12: incarcerations
+       0          13 TO 14: incarcerations
+       0          15 TO 16: incarcerations
+       0          17 TO 18: incarcerations
+       0          19 TO 20: incarcerations
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:             12        Mean:                 .17
+ 
+Hard Minimum: [0]  Hard Maximum: [999999]
+ 
+Lead In: E80430.00[Default]
+Default Next Question: E80432.00
+--------------------------------------------------------------------------------
+E80435.00    [INCARC_TOTMONTHS]                             Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             TOTAL MONTHS INCARCERATED
+ 
+Total number of months the respondent has spent incarcerated to date.
+ 
+    8461           0 TO 3: months
+      88           4 TO 6: months
+      53           7 TO 9: months
+      41          10 TO 12: months
+      61          13 TO 18: months
+      50          19 TO 24: months
+      73          25 TO 36: months
+      40          37 TO 48: months
+     117          49 TO 999: months
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:            299        Mean:                1.87
+ 
+Hard Minimum: [0]  Hard Maximum: [999999]
+ 
+Lead In: E80434.00[Default]
+Default Next Question: E80436.00
+--------------------------------------------------------------------------------
+R00001.00    [PUBID]                                        Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             PUBID, YOUTH CASE IDENTIFICATION CODE
+ 
+COMMENT: YOUTH CASE IDENTIFICATION CODE
+ 
+       0           0
+     998           1 TO 999
+     999        1000 TO 1999
+     997        2000 TO 2999
+     996        3000 TO 3999
+     998        4000 TO 4999
+     996        5000 TO 5999
+     994        6000 TO 6999
+     994        7000 TO 7999
+     989        8000 TO 8999
+      23        9000 TO 9999
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:           9022        Mean:              4504.3
+ 
+Hard Minimum: [0]  Hard Maximum: [99999999]
+ 
+Lead In: R72976.00[Default]
+Default Next Question: R05363.00
+--------------------------------------------------------------------------------
+T81291.00    [CV_INCOME_FAMILY]                             Survey Year: 2013
+  PRIMARY VARIABLE
+
+ 
+             GROSS FAMILY INCOME
+ 
+Gross family income in the previous year.
+/*Topcoded at the 2% level.  Truncated values are applied to the top 2 percent 
+of respondents with valid non-missing responses.  The average value of the top 2
+percent of cases is used as the value.  Negative values of -1, -2, -3, -4, or -5
+do not reflect negative monetary amounts; these numbers represent standard 
+NLSY97 codes.*/
+ 
+       0     -999999 TO -3000: < -2999
+       0       -2999 TO -2000
+       0       -1999 TO -1000
+       0        -999 TO -1
+     270           0
+      52           1 TO 1000
+      27        1001 TO 2000
+      59        2001 TO 3000
+      75        3001 TO 5000
+     251        5001 TO 10000
+     491       10001 TO 20000
+     583       20001 TO 30000
+     616       30001 TO 40000
+     618       40001 TO 50000
+     774       50001 TO 65000
+     722       65001 TO 80000
+     695       80001 TO 100000
+     786      100001 TO 150000
+     227      150001 TO 200000
+     227      200001 TO 999999: 200001+
+  -------
+    6473
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     668
+TOTAL =========>    7141   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1843
+ 
+Min:              0        Max:         325468        Mean:            67515.43
+ 
+Hard Minimum: [0]  Hard Maximum: [9999999]
+ 
+Lead In: T81290.00[Default]
+Default Next Question: T81292.00
+--------------------------------------------------------------------------------
+Z90839.00    [CVC_HIGHEST_DEGREE_EVER]                      Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             HIGHEST DEGREE RECEIVED
+ 
+CUMULATIVE VARIABLE: The highest degree received. This variable is created for 
+all respondents regardless of interview status in the current round; CVC_RND 
+provides the actual round of the respondent's most recent interview.
+ 
+    1055       0 None
+    1104       1 GED
+    3869       2 High school diploma (Regular 12 year program)
+     667       3 Associate/Junior college (AA)
+    1665       4 Bachelor's degree (BA, BS)
+     471       5 Master's degree (MA, MS)
+      30       6 PhD
+      93       7 Professional degree (DDS, JD, MD)
+  -------
+    8954
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      30
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: Z90838.00[Default]
+Default Next Question: Z90840.00
