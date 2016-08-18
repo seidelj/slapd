@@ -18,6 +18,10 @@ label define vlR0214700   1 "HISPANIC"  2 "BLACK"  3 "NON-BLACK, NON-HISPANIC"
 label values R0214700 vlR0214700
 label define vlR0214800   1 "MALE"  2 "FEMALE"
 label values R0214800 vlR0214800
+label define vlR0217900   0 "0"
+label values R0217900 vlR0217900
+label define vlR0217910   1 "IN POVERTY"  0 "NOT IN POVERTY"
+label values R0217910 vlR0217910
 label define vlR0223100   1 "YES"  0 "NO"
 label values R0223100 vlR0223100
 label define vlR0223500   1 "YES"  0 "NO"
@@ -74,8 +78,14 @@ label define vlT3966800   1 "Heart Attack/Stroke"  2 "Accident"  3 "Cancer"  4 "
 label values T3966800 vlT3966800
 label define vlT3967300   1 "Heart Attack/Stroke"  2 "Accident"  3 "Cancer"  4 "Old Age"  5 "Emphysema"  6 "Other (specify)"
 label values T3967300 vlT3967300
+label define vlT3977400   0 "0"
+label values T3977400 vlT3977400
+label define vlT3987600   0 "0"
+label values T3987600 vlT3987600
 label define vlT4112300   0 "0"
 label values T4112300 vlT4112300
+label define vlT4112500   0 "0: NOT IN POVERTY"  1 "1: IN POVERTY"
+label values T4112500 vlT4112500
 label define vlT4113000   0 "NONE"  93 "PRE-KINDERGARTEN"  94 "KINDERGARTEN"  1 "1ST GRADE"  2 "2ND GRADE"  3 "3RD GRADE"  4 "4TH GRADE"  5 "5TH GRADE"  6 "6TH GRADE"  7 "7TH GRADE"  8 "8TH GRADE"  9 "9TH GRADE"  10 "10TH GRADE"  11 "11TH GRADE"  12 "12TH GRADE"  13 "1ST YEAR COLLEGE"  14 "2ND YEAR COLLEGE"  15 "3RD YEAR COLLEGE"  16 "4TH YEAR COLLEGE"  17 "5TH YEAR COLLEGE"  18 "6TH YEAR COLLEGE"  19 "7TH YEAR COLLEGE"  20 "8TH YEAR COLLEGE OR MORE"  95 "UNGRADED"
 label values T4113000 vlT4113000
 /* Crosswalk for Reference number & Question name
@@ -96,6 +106,8 @@ label values T4113000 vlT4113000
   rename R0188000 HH1_1_1979   // HH1-1
   rename R0214700 SAMPLE_RACE_78SCRN 
   rename R0214800 SAMPLE_SEX_1979 
+  rename R0217900 TNFI_TRUNC_1979 
+  rename R0217910 POVSTATUS_1979 
   rename R0223100 H40_BPAR_6_1980   // H40-BPAR-6
   rename R0223500 H40_BPAR_1_1980   // H40-BPAR-1
   rename R0402800 HH1_1_1980   // HH1-1
@@ -124,7 +136,10 @@ label values T4113000 vlT4113000
   rename T3195700 HH1_1_2012   // HH1-1
   rename T3966800 Q11_H50BPAR_2_2012   // Q11-H50BPAR-2
   rename T3967300 Q11_H50BPAR_7_2012   // Q11-H50BPAR-7
+  rename T3977400 Q13_5_TRUNC_2012   // Q13-5_TRUNC
+  rename T3987600 Q13_18_TRUNC_2012   // Q13-18_TRUNC
   rename T4112300 TNFI_TRUNC_2012 
+  rename T4112500 POVSTATUS_2012 
   rename T4113000 HGC_2012 
 */
   /* *end* */  
