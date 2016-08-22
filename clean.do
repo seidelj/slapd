@@ -27,6 +27,10 @@ replace COD_FATHER = T7710300 if T7710300 > 0
 replace COD_FATHER = T9112300 if T9112300 > 0
 drop if COD_FATHER == 999
 
+gen age = .
+replace age = S1241500 if S1241500 > 0
+replace age = S1241600 if S1241600 > 0 & S1241600 < age
+
 count if S1241500 != -4 & COD_MOTHER == 2 | COD_MOTHER == 10
 
 count if S1241600 != -4 & COD_FATHER == 2 | COD_FATHER == 10
@@ -40,7 +44,7 @@ drop if _merge != 3
 drop _merge
 
 
-keep R0000100 R0536300 R0536401 R0536402 R1482600 S1241500 S1241600 COD_MOTHER COD_FATHER R1204500 R1204900 T8129200 T8976700 T8978000
+keep R0000100 R0536300 R0536401 R0536402 R1482600 S1241500 S1241600 COD_MOTHER COD_FATHER R1204500 R1204900 T8129200 T8976700 T8978000 age
 
 gen trt = .
 replace trt = 1 if COD_MOTHER == 2 | COD_MOTHER == 10 | COD_FATHER == 2 | COD_FATHER == 10
@@ -101,7 +105,7 @@ replace faminc_youth = grossinc_youth * .65 if grossinc_youth <= 400000 & faminc
 replace faminc_youth = grossinc_youth * .604 if grossinc_youth > 400000 & faminc_youth == .
 
 
-keep id trt race gender incarc faminc faminc_youth pov pov_youth edu wages wages_sp
+keep id trt race gender incarc faminc faminc_youth pov pov_youth edu wages wages_sp age
 
 save main, replace 
 
@@ -136,6 +140,7 @@ rename R0217900 faminc_youth
 rename T4112500 pov
 rename T3977400 wages
 rename T3987600 wages_sp
+rename R0000600 age
 
 replace race = 4 if race == 3
 
@@ -146,7 +151,7 @@ foreach var of varlist R0402800 R0612100 R0828400 R1075700 R1451400 R1798600 R21
 	
 
 gen id = "NLS79_" + string(R0000100)
-keep id trt race gender incarc faminc faminc_youth edu pov_youth pov wages wages_sp
+keep id trt race gender incarc faminc faminc_youth edu pov_youth pov wages wages_sp age
 
 merge 1:1 id using main
 drop _merge
