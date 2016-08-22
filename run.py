@@ -11,10 +11,10 @@ csvFile = os.path.join(ROOT, 'main.csv')
 df = pd.read_csv(csvFile, index_col=11)
 print df.describe()
 
-print pd.crosstab(df['hs'], df['trt'], rownames=['graduated hs'])
+#print pd.crosstab(df['hs'], df['trt'], rownames=['graduated hs'])
 
-df.hist()
-pl.show()
+#df.hist()
+#pl.show()
 
 dummy_gender = pd.get_dummies(df['gender'], prefix="gender")
 print dummy_gender.head()
@@ -22,17 +22,17 @@ print dummy_gender.head()
 dummy_race = pd.get_dummies(df['race'], prefix="race")
 print dummy_race.head()
 
-cols_to_keep = ['hs', 'trt']
+cols_to_keep = ['edu', 'trt']
 data = df[cols_to_keep].join(dummy_gender.ix[:, 'gender_2':])
 data = data.join(dummy_race.ix[:, 'race_2':])
 
 data = sm.add_constant(data, prepend=False)
 
 independent_vars = data.columns[1:]
-hs_logit = sm.MNLogit(data['hs'], data[independent_vars], missing='drop')
-hs_result = hs_logit.fit()
+edu_ols = sm.OLS(data['edu'], data[independent_vars], missing='drop')
+edu_result = edu_ols.fit()
 
-print hs_result.summary()
+print edu_result.summary()
 
 #df = df[(df.S1240800 == 1) | (df.S1240801 == 1)]
 
