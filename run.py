@@ -8,7 +8,7 @@ DATA = os.path.join(ROOT, 'nls')
 csvFile = os.path.join(ROOT, 'main.csv')
 
 
-df = pd.read_csv(csvFile, index_col=11)
+df = pd.read_csv(csvFile, index_col=12)
 print df.describe()
 
 #print pd.crosstab(df['hs'], df['trt'], rownames=['graduated hs'])
