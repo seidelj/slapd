@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-import matplotlib.pyplot as pl
+#import matplotlib.pyplot as pl
 import statsmodels.api as sm
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
