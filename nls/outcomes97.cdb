@@ -462,3 +462,46 @@ Soft Minimum: [0]  Soft Maximum: [200000]
  
 Lead In: T89779.00[Default]  T89778.00[0:0]
 Default Next Question: T89782.00
+--------------------------------------------------------------------------------
+Z90838.00    [CVC_HGC_EVER]                                 Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             RS HIGHEST GRADE COMPLETED
+ 
+CUMULATIVE VARIABLE: The highest grade completed. This variable is created for 
+all respondents regardless of interview status in the current round; CVC_RND 
+provides the actual round of the respondent's most recent interview.
+ 
+       1       0 None
+       0       1 1st grade
+       1       2 2nd grade
+       0       3 3rd grade
+       0       4 4th grade
+       5       5 5th grade
+      32       6 6th grade
+      63       7 7th grade
+     304       8 8th grade
+     461       9 9th grade
+     519      10 10th grade
+     574      11 11th grade
+    2009      12 12th grade
+     794      13 1st year college
+     992      14 2nd year college
+     522      15 3rd year college
+    1231      16 4th year college
+     457      17 5th year college
+     420      18 6th year college
+     226      19 7th year college
+     258      20 8th year college or more
+      16      95 Ungraded
+  -------
+    8885
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      99
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: Z90837.00[Default]
+Default Next Question: Z90839.00

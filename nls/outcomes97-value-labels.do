@@ -22,6 +22,8 @@ label define vlT8976700   0 "0"
 label values T8976700 vlT8976700
 label define vlT8978000   0 "0"
 label values T8978000 vlT8978000
+label define vlZ9083800   0 "None"  1 "1st grade"  2 "2nd grade"  3 "3rd grade"  4 "4th grade"  5 "5th grade"  6 "6th grade"  7 "7th grade"  8 "8th grade"  9 "9th grade"  10 "10th grade"  11 "11th grade"  12 "12th grade"  13 "1st year college"  14 "2nd year college"  15 "3rd year college"  16 "4th year college"  17 "5th year college"  18 "6th year college"  19 "7th year college"  20 "8th year college or more"  95 "Ungraded"
+label values Z9083800 vlZ9083800
 /* Crosswalk for Reference number & Question name
  * Uncomment and edit this RENAME statement to rename variables for ease of use.
  * This command does not guarantee uniqueness
@@ -41,6 +43,7 @@ label values T8978000 vlT8978000
   rename T8129200 CV_HH_POV_RATIO_2013 
   rename T8976700 YINC_1700_2013   // YINC-1700
   rename T8978000 YINC_2600_2013   // YINC-2600
+  rename Z9083800 CVC_HGC_EVER_XRND 
 */
   /* *end* */  
 /* To convert variable names to lower case use the TOLOWER command 

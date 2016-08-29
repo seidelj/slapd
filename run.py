@@ -22,7 +22,7 @@ print dummy_gender.head()
 dummy_race = pd.get_dummies(df['race'], prefix="race")
 print dummy_race.head()
 
-cols_to_keep = ['edu', 'trt']
+cols_to_keep = ['edu', 'trt', 'pov_youth']
 data = df[cols_to_keep].join(dummy_gender.ix[:, 'gender_2':])
 data = data.join(dummy_race.ix[:, 'race_2':])
 
