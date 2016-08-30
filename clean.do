@@ -11,13 +11,16 @@ save outcomes97, replace
 clear
 infile using dataset1DEATH.dct
 
-drop if S1240800 != 1 & S1240801 != 1
+gen pop = .
+replace pop = 0 if S1240800 != 1 & S1240801 != 1
+replace pop = 1 if S1240800 == 1 | S1240801 == 1
  
 gen COD_MOTHER = .
 replace COD_MOTHER = T4581000 if T4581000 > 0
 replace COD_MOTHER = T6213300 if T6213300 > 0 
 replace COD_MOTHER = T7710700 if T7710700 > 0 
 replace COD_MOTHER = T9112700 if T9112700 > 0
+drop if COD_MOTHER == 999
 
 
 gen COD_FATHER = .
@@ -44,11 +47,11 @@ drop if _merge != 3
 drop _merge
 
 
-keep R0000100 Z9083800 R0536300 R0536401 R0536402 R1482600 S1241500 S1241600 COD_MOTHER COD_FATHER R1204500 R1204900 T8129200 T8976700 T8978000 age
+keep R0000100 Z9083800 R0536300 R0536401 R0536402 R1482600 S1241500 S1241600 COD_MOTHER COD_FATHER R1204500 R1204900 T8129200 T8976700 T8978000 age pop
 
 gen trt = .
-replace trt = 1 if COD_MOTHER == 2 | COD_MOTHER == 10 | COD_FATHER == 2 | COD_FATHER == 10
-replace trt = 0 if COD_MOTHER != 2 & COD_MOTHER != 10 & COD_FATHER != 2 & COD_FATHER != 10
+replace trt = 1 if COD_MOTHER == 2 | COD_MOTHER == 10 | COD_FATHER == 2 | COD_FATHER == 10 & (pop == 1)
+replace trt = 0 if COD_MOTHER != 2 & COD_MOTHER != 10 & COD_FATHER != 2 & COD_FATHER != 10 & (pop == 1)
 
 
 rename R0536300 gender
@@ -105,7 +108,7 @@ replace faminc_youth = grossinc_youth * .65 if grossinc_youth <= 400000 & faminc
 replace faminc_youth = grossinc_youth * .604 if grossinc_youth > 400000 & faminc_youth == .
 
 
-keep id trt race gender incarc faminc faminc_youth pov pov_youth edu wages wages_sp age
+keep id trt race gender incarc faminc faminc_youth pov pov_youth edu wages wages_sp age pop
 
 save main, replace 
 
@@ -113,7 +116,10 @@ clear
 
 infile using death79.dct
 
-drop if R0006700 != 0 & R0008100 != 0 & R0223100 !=0 & R0223500 != 0
+
+gen pop = .
+replace pop = 0 if R0006700 != 0 & R0008100 != 0 & R0223100 !=0 & R0223500 != 0
+replace pop = 1 if R0006700 == 1 | R0008100 == 0 | R0223100 == 0 | R0223500 == 0
 
 gen COD_MOTHER = .
 replace COD_MOTHER = H0002500 if H0002500 > 0 & (R0006700 == 0 | R0223100 == 0)
@@ -123,12 +129,12 @@ gen COD_FATHER = .
 replace COD_FATHER = H0001700 if H0001700 > 0 & (R0223500 == 0 |  R0008100==0)
 replace COD_FATHER = H0013700 if H0013700 > 0 & (R0223500 == 0 |  R0008100==0)
 
-drop if COD_FATHER == . & COD_MOTHER == .
+#drop if COD_FATHER == . & COD_MOTHER == .
 
 gen trt = .
-replace trt = 1 if COD_FATHER == 2
-replace trt = 1 if COD_MOTHER == 2
-replace trt = 0 if COD_FATHER != 2 & COD_MOTHER != 2
+replace trt = 1 if COD_FATHER == 2 & pop == 1
+replace trt = 1 if COD_MOTHER == 2 & pop == 1
+replace trt = 0 if COD_FATHER != 2 & COD_MOTHER != 2 & (pop == 1)
 
 
 rename R0214700 race
@@ -151,7 +157,9 @@ foreach var of varlist R0402800 R0612100 R0828400 R1075700 R1451400 R1798600 R21
 	
 
 gen id = "NLS79_" + string(R0000100)
-keep id trt race gender incarc faminc faminc_youth edu pov_youth pov wages wages_sp age
+keep id trt race gender incarc faminc faminc_youth edu pov_youth pov wages wages_sp age pop
+
+replace faminc_youth = faminc_youth * 2.21
 
 merge 1:1 id using main
 drop _merge
@@ -166,9 +174,9 @@ replace pov_youth = . if pov_youth < 0
 replace pov = . if pov < 0
 
 replace faminc_youth = . if faminc_youth < 0
-replace wages = 0 if wages == -5
+#replace wages = 0 if wages == -5
 replace wages = . if wages < 0
-replace wages_sp = 0 if wages == -5
+#replace wages_sp = 0 if wages == -5
 replace wages_sp = . if wages_sp < 0
 
 gen college = 1 if edu >= 16
@@ -180,6 +188,7 @@ replace total_wages = wages + wages_sp if wages != . & wages_sp != .
 replace total_wages = wages if wages_sp == . & total_wages == .
 replace total_wages = wages_sp if wages == . & total_wages == .
 
+replace edu = . if edu == 95
 
 
 
