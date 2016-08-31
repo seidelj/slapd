@@ -188,6 +188,52 @@ Min:             14        Max:             22        Mean:                17.9
 Lead In: R00005.00[Default]
 Default Next Question: R00007.00
 --------------------------------------------------------------------------------
+R00065.00    [HGC-MOTHER]                                   Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             HIGHEST GRADE COMPLETED BY R'S MOTHER
+ 
+ORIGINAL QUESTION NAME: S01Q16
+ 
+WHAT IS THE HIGHEST GRADE OR YEAR OF REGULAR SCHOOL THAT YOUR MOTHER EVER 
+COMPLETED?
+ 
+UNIVERSE: R with mother/mother figure
+ 
+     132       0 NONE
+      24       1 1ST GRADE
+      87       2 2ND GRADE
+     183       3 3RD GRADE
+     173       4 4TH GRADE
+     198       5 5TH GRADE
+     421       6 6TH GRADE
+     260       7 7TH GRADE
+     801       8 8TH GRADE
+     698       9 9TH GRADE
+     999      10 10TH GRADE
+    1107      11 11TH GRADE
+    4817      12 12TH GRADE
+     364      13 1ST YR COL
+     561      14 2ND YR COL
+     178      15 3RD YR COL
+     647      16 4TH YR COL
+     101      17 5TH YR COL
+      92      18 6TH YR COL
+      14      19 7TH YR COL
+      21      20 8TH YR COL OR MORE
+       0      95 UNGRADED
+  -------
+   11878
+ 
+Refusal(-1)            3
+Don't Know(-2)       527
+Invalid Skip(-3)     251
+TOTAL =========>   12659   VALID SKIP(-4)      27     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00061.00[Default]
+Default Next Question: R00066.00
+--------------------------------------------------------------------------------
 R00067.00    [H40-BPAR-6]                                   Survey Year: 1979
   PRIMARY VARIABLE
 
@@ -212,6 +258,52 @@ TOTAL =========>    3939   VALID SKIP(-4)    8747     NON-INTERVIEW(-5)       0
  
 Lead In: R00066.00[Default]
 Default Next Question: R00068.00
+--------------------------------------------------------------------------------
+R00079.00    [HGC-FATHER]                                   Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             HIGHEST GRADE COMPLETED BY R'S FATHER
+ 
+ORIGINAL QUESTION NAME: S01Q23
+ 
+LET'S GO BACK TO YOUR FATHER NOW. WHAT IS THE HIGHEST GRADE OR YEAR OF REGULAR 
+SCHOOL THAT YOUR FATHER EVER COMPLETED?
+ 
+UNIVERSE: R with father/father figure
+ 
+     199       0 NONE
+      48       1 1ST GRADE
+     102       2 2ND GRADE
+     215       3 3RD GRADE
+     208       4 4TH GRADE
+     190       5 5TH GRADE
+     499       6 6TH GRADE
+     306       7 7TH GRADE
+     950       8 8TH GRADE
+     568       9 9TH GRADE
+     754      10 10TH GRADE
+     616      11 11TH GRADE
+    3694      12 12TH GRADE
+     286      13 1ST YR COL
+     558      14 2ND YR COL
+     162      15 3RD YR COL
+     899      16 4TH YR COL
+     151      17 5TH YR COL
+     209      18 6TH YR COL
+      56      19 7TH YR COL
+     210      20 8TH YR COL OR MORE
+       0      95 UNGRADED
+  -------
+   10880
+ 
+Refusal(-1)            3
+Don't Know(-2)      1150
+Invalid Skip(-3)     423
+TOTAL =========>   12456   VALID SKIP(-4)     230     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00077.00[Default]
+Default Next Question: R00080.00
 --------------------------------------------------------------------------------
 R00081.00    [H40-BPAR-1]                                   Survey Year: 1979
   PRIMARY VARIABLE

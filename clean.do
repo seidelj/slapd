@@ -47,13 +47,15 @@ drop if _merge != 3
 drop _merge
 
 
-keep R0000100 Z9083800 R0536300 R0536401 R0536402 R1482600 S1241500 S1241600 COD_MOTHER COD_FATHER R1204500 R1204900 T8129200 T8976700 T8978000 age pop
+keep R0000100 Z9083800 R0536300 R0536401 R0536402 R1482600 S1241500 S1241600 COD_MOTHER COD_FATHER R1204500 R1204900 T8129200 T8976700 T8978000 age pop R1302600 R1302700
+
 
 gen trt = .
 replace trt = 1 if COD_MOTHER == 2 | COD_MOTHER == 10 | COD_FATHER == 2 | COD_FATHER == 10 & (pop == 1)
 replace trt = 0 if COD_MOTHER != 2 & COD_MOTHER != 10 & COD_FATHER != 2 & COD_FATHER != 10 & (pop == 1)
 
-
+rename R1302600 hgc_dad
+rename R1302700 hgc_mom
 rename R0536300 gender
 rename R1482600 race
 gen id = "NLS97_" + string(R0000100)
@@ -108,7 +110,7 @@ replace faminc_youth = grossinc_youth * .65 if grossinc_youth <= 400000 & faminc
 replace faminc_youth = grossinc_youth * .604 if grossinc_youth > 400000 & faminc_youth == .
 
 
-keep id trt race gender incarc faminc faminc_youth pov pov_youth edu wages wages_sp age pop
+keep id trt race gender incarc faminc faminc_youth pov pov_youth edu wages wages_sp age pop hgc_dad hgc_mom
 
 save main, replace 
 
@@ -147,6 +149,8 @@ rename T4112500 pov
 rename T3977400 wages
 rename T3987600 wages_sp
 rename R0000600 age
+rename R0006500 hgc_mom
+rename R0007900 hgc_dad
 
 replace race = 4 if race == 3
 
@@ -157,7 +161,7 @@ foreach var of varlist R0402800 R0612100 R0828400 R1075700 R1451400 R1798600 R21
 	
 
 gen id = "NLS79_" + string(R0000100)
-keep id trt race gender incarc faminc faminc_youth edu pov_youth pov wages wages_sp age pop
+keep id trt race gender incarc faminc faminc_youth edu pov_youth pov wages wages_sp age pop hgc_dad hgc_mom
 
 replace faminc_youth = faminc_youth * 2.21
 
@@ -189,6 +193,8 @@ replace total_wages = wages if wages_sp == . & total_wages == .
 replace total_wages = wages_sp if wages == . & total_wages == .
 
 replace edu = . if edu == 95
+replace hgc_mom = . if hgc_mom == 95 | hgc_mom < 0
+replace hgc_dad = . if hgc_dad == 95 | hgc_dad < 0
 
 
 
